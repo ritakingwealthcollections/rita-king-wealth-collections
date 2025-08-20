@@ -1,0 +1,1421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Rita King Wealth Collections FashionSphere - Elegant African fashion for men, women, and kids.">
+  <meta name="keywords" content="Ankara fashion, Nigerian clothing, custom attire, Rita King FashionSphere">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <title>Rita King Wealth Collections FashionSphere</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: purple;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    body.dark-mode {
+      background-color: #1a1a1a;
+      color: #f0f0f0;
+    }
+    header {
+      background-color: green;
+      color: white;
+      padding: 4.5rem;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      position: relative;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    body.dark-mode header {
+      background-color: #004d00;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    .theme-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background-color: #e91e63;
+      color: white;
+      border: none;
+      font-size: 1.5rem;
+      padding: 8px;
+      border-radius: 50%;
+      cursor: pointer;
+      opacity: 0.7;
+      transition: opacity 0.3s, background-color 0.3s;
+    }
+    .theme-toggle:hover {
+      opacity: 1;
+      background-color: #d81b60;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: #ffe6f0;
+      padding: 10px;
+      gap: 20px;
+      align-items: center;
+      transition: background-color 0.3s;
+    }
+    body.dark-mode nav {
+      background-color: #333;
+    }
+    nav a {
+      color: #e91e63;
+      text-decoration: none;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      transition: color 0.3s;
+    }
+    body.dark-mode nav a {
+      color: #ff69b4;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    nav a i {
+      font-size: 1.2em;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+    .upload-form, .post, .styles-section, .contact-info, .contact-us, .portfolio-section, .featured-designs {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    body.dark-mode .upload-form,
+    body.dark-mode .post,
+    body.dark-mode .styles-section,
+    body.dark-mode .contact-info,
+    body.dark-mode .contact-us,
+    body.dark-mode .portfolio-section,
+    body.dark-mode .featured-designs {
+      background: #2a2a2a;
+      color: #f0f0f0;
+    }
+    input[type="text"], input[type="email"], input[type="file"], textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      transition: border-color 0.3s, background-color 0.3s;
+    }
+    body.dark-mode input[type="text"],
+    body.dark-mode input[type="email"],
+    body.dark-mode input[type="file"],
+    body.dark-mode textarea {
+      border-color: #555;
+      background-color: #333;
+      color: #f0f0f0;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #e91e63;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    button:hover {
+      background-color: #d81b60;
+    }
+    .post img, .post video {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+    .styles-section h2, .featured-designs h2 {
+      font-size: 2.2em;
+      margin-bottom: 20px;
+      color: #444;
+      text-align: center;
+      transition: color 0.3s;
+    }
+    body.dark-mode .styles-section h2,
+    body.dark-mode .featured-designs h2 {
+      color: #f0f0f0;
+    }
+    .styles-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .style-card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      width: 250px;
+      overflow: hidden;
+      transition: transform 0.3s, background-color 0.3s;
+    }
+    body.dark-mode .style-card {
+      background: #2a2a2a;
+    }
+    .style-card:hover {
+      transform: scale(1.2);
+    }
+    .style-card img {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+      transition: all 1s;
+    }
+    .style-card h3 {
+      margin: 15px 0 5px;
+      color: #900;
+      transition: color 0.3s;
+    }
+    body.dark-mode .style-card h3 {
+      color: #ff69b4;
+    }
+    .style-card p {
+      padding: 0 10px 15px;
+      font-size: 0.95em;
+      color: #555;
+      transition: color 0.3s;
+    }
+    body.dark-mode .style-card p {
+      color: #f0f0f0;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #e91e63;
+      color: white;
+      transition: background-color 0.3s;
+    }
+    body.dark-mode footer {
+      background: #d81b60;
+    }
+    .car1 { color: white; }
+    .car2 { color: black; transition: color 0.3s; }
+    body.dark-mode .car2 { color: #f0f0f0; }
+    .car3 {
+      color: orange;
+      font-size: 1.5rem;
+      font-weight: bolder;
+      font-family: georgia;
+    }
+    .car4 { color: skyblue; }
+    .car5 { color: green; }
+    .input-group { color: green; }
+    h2 {
+      color: white;
+      text-align: center;
+      font-weight: bolder;
+    }
+    .florish3 { color: orange; }
+    .florish4 { color: green; }
+    .florish5 { color: purple; }
+    .florishblue { color: blue; }
+    .florishsky { color: yellow; }
+    .florishpink { color: pink; }
+    .slider-container {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      padding: 10px;
+      background-color: black;
+      border-top: 5px solid purple;
+      border-bottom: 5px solid #e91e63;
+      margin: 30px 0;
+      transition: background-color 0.3s, border-color 0.3s;
+    }
+    body.dark-mode .slider-container {
+      background-color: #111;
+      border-top-color: #800080;
+      border-bottom-color: #d81b60;
+    }
+    .product-slider {
+      display: flex;
+      gap: 20px;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      padding: 10px;
+    }
+    .product-card {
+      flex: 0 0 auto;
+      width: 180px;
+      background: white;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s, background-color 0.3s;
+    }
+    body.dark-mode .product-card {
+      background: #2a2a2a;
+    }
+    .product-card:hover {
+      transform: scale(1.05);
+    }
+    .product-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 12px 12px 0 0;
+    }
+    .product-card p {
+      font-size: 0.95rem;
+      color: #e91e63;
+      font-weight: bold;
+      padding: 10px;
+      margin: 0;
+      transition: color 0.3s;
+    }
+    body.dark-mode .product-card p {
+      color: #ff69b4;
+    }
+    .slide-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: #e91e63;
+      color: white;
+      border: none;
+      font-size: 24px;
+      padding: 10px 15px;
+      border-radius: 50%;
+      cursor: pointer;
+      opacity: 0.7;
+      z-index: 5;
+      transition: background-color 0.3s, opacity 0.3s;
+    }
+    .slide-btn:hover {
+      opacity: 1;
+      background-color: #d81b60;
+    }
+    .slide-btn.left { left: 10px; }
+    .slide-btn.right { right: 10px; }
+    @media (max-width: 600px) {
+      .product-card { width: 140px; }
+      .product-card img { height: 150px; }
+      .slide-btn { padding: 6px 10px; font-size: 18px; }
+    }
+    .nasaka {
+      font-size: 3rem;
+      font-style: italic;
+      color: green;
+      text-align: center;
+      margin-bottom: 20px;
+      font-weight: bold;
+      box-shadow: 0 10px 20px;
+    }
+    .text-slider {
+      width: 100%;
+      overflow: hidden;
+      background: linear-gradient(to right, purple, hotpink);
+      padding: 12px 0;
+      font-weight: 900;
+      font-size: 1rem;
+      text-align: center;
+      position: relative;
+      z-index: 5;
+      transition: background 0.3s;
+    }
+    body.dark-mode .text-slider {
+      background: linear-gradient(to right, #4b0082, #c71585);
+    }
+    .slide-track {
+      display: flex;
+      width: fit-content;
+      animation: scrollText 25s linear infinite;
+      gap: 100px;
+    }
+    .slide {
+      white-space: nowrap;
+      padding: 0 30px;
+      font-size: 1.1em;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    }
+    .slide:nth-child(1) { color: #ffffff; }
+    .slide:nth-child(2) { color: #ffd700; }
+    .slide:nth-child(3) { color: #00ff00; }
+    .slide:nth-child(4) { color: black; }
+    @keyframes scrollText {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+    @media (max-width: 600px) {
+      .text-slider { font-size: 0.9rem; }
+    }
+    .fade-slider {
+      position: relative;
+      width: 100%;
+      max-width: 1200px;
+      margin: 40px auto;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      background-color: black;
+      transition: background-color 0.3s;
+    }
+    body.dark-mode .fade-slider {
+      background-color: #111;
+    }
+    .fade-slide {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 1.5s ease-in-out;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .fade-slide img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+    .fade-slide.active {
+      opacity: 1;
+      z-index: 2;
+    }
+    .slider-dots {
+      text-align: center;
+      margin-top: 15px;
+    }
+    .slider-dot {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      margin: 4px;
+      background-color: #ccc;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    body.dark-mode .slider-dot {
+      background-color: #666;
+    }
+    .slider-dot.active {
+      background-color: #555;
+    }
+    body.dark-mode .slider-dot.active {
+      background-color: #ff69b4;
+    }
+    @media (max-width: 768px) {
+      .fade-slider { aspect-ratio: 16 / 9; }
+    }
+    .social-icons {
+      color: white;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      background-color: black;
+      padding: 10px;
+      gap: 30px;
+      font-weight: bolder;
+      border-radius: 50%;
+      transition: background-color 0.3s;
+    }
+    body.dark-mode .social-icons {
+      background-color: #111;
+    }
+    .social-icons i {
+      transition: color 0.3s;
+    }
+    .social-icons i:nth-child(1) { color: #ffffff; }
+    .social-icons i:nth-child(2) { color: #ffd700; }
+    .social-icons i:nth-child(3) { color: #00ff00; }
+    .social-icons i:nth-child(4) { color: #ff69b4; }
+    .social-icons i:nth-child(5) { color: #ffffff; }
+    .social-icons i:hover {
+      color: #e91e63;
+    }
+    .arise {
+      float: left;
+    }
+    .contact-info, .contact-us {
+      background: #e8f5e9;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin-bottom: 30px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    body.dark-mode .contact-info,
+    body.dark-mode .contact-us {
+      background: #2e7d32;
+      color: #f0f0f0;
+    }
+    .contact-info h2, .contact-us h2 {
+      color: #2e7d32;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    body.dark-mode .contact-info h2,
+    body.dark-mode .contact-us h2 {
+      color: #81c784;
+    }
+    .contact-details p {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.1rem;
+      margin: 10px 0;
+      color: #1b5e20;
+    }
+    body.dark-mode .contact-details p {
+      color: #c8e6c9;
+    }
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .input-group {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .input-group label {
+      color: #2e7d32;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+    body.dark-mode .input-group label {
+      color: #81c784;
+    }
+    .input-group input,
+    .input-group textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #4caf50;
+      border-radius: 5px;
+      font-size: 1rem;
+      transition: border-color 0.3s, background-color 0.3s;
+    }
+    body.dark-mode .input-group input,
+    body.dark-mode .input-group textarea {
+      border-color: #81c784;
+      background-color: #1a3c34;
+      color: #f0f0f0;
+    }
+    .input-group input:focus,
+    .input-group textarea:focus {
+      outline: none;
+      border-color: #1b5e20;
+      box-shadow: 0 0 5px rgba(46, 125, 50, 0.5);
+    }
+    .contact-form button {
+      background-color: #4caf50;
+      padding: 12px 20px;
+      font-size: 1.1rem;
+      transition: background-color 0.3s;
+    }
+    .contact-form button:hover {
+      background-color: #388e3c;
+    }
+    @media (max-width: 600px) {
+      .contact-info, .contact-us {
+        padding: 15px;
+      }
+      .contact-details p {
+        font-size: 1rem;
+      }
+      .contact-form button {
+        font-size: 1rem;
+        padding: 10px;
+      }
+    }
+    @media (max-width: 768px) {
+      header {
+        padding: 2rem;
+      }
+      header h1 {
+        font-size: 1.8rem;
+      }
+      .arise {
+        width: 120px;
+        height: 120px;
+      }
+      nav {
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px;
+      }
+      nav a {
+        font-size: 1rem;
+      }
+      .container {
+        padding: 15px;
+      }
+      .styles-grid {
+        flex-direction: column;
+        align-items: center;
+      }
+      .style-card {
+        width: 100%;
+        max-width: 300px;
+      }
+      .style-card img {
+        height: 200px;
+      }
+      .nasaka {
+        font-size: 2rem;
+      }
+      .product-card {
+        width: 120px;
+      }
+      .product-card img {
+        height: 120px;
+      }
+      .fade-slider {
+        aspect-ratio: 4 / 3;
+      }
+    }
+    @media (max-width: 480px) {
+      header {
+        padding: 1.5rem;
+      }
+      header h1 {
+        font-size: 1.5rem;
+      }
+      .arise {
+        width: 100px;
+        height: 100px;
+      }
+      .theme-toggle {
+        top: 10px;
+        right: 10px;
+        padding: 6px;
+        font-size: 1.2rem;
+      }
+      .nasaka {
+        font-size: 1.8rem;
+      }
+      .product-card {
+        width: 100px;
+      }
+      .product-card img {
+        height: 100px;
+      }
+    }
+    .fashion-table {
+      max-width: 100%;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+    body.dark-mode .fashion-table {
+      background-color: #2a2a2a;
+    }
+    .fashion-table:hover {
+      transform: translateY(-5px);
+    }
+    .fashion-table table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 1em;
+    }
+    .fashion-table th, .fashion-table td {
+      padding: 15px;
+      text-align: left;
+      vertical-align: top;
+    }
+    .fashion-table th {
+      background-color: #e91e63;
+      color: #fff;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2em;
+      font-weight: 700;
+      text-transform: uppercase;
+      width: 30%;
+    }
+    body.dark-mode .fashion-table th {
+      background-color: #d81b60;
+    }
+    .fashion-table td {
+      background-color: #ffe6f0;
+      color: #444;
+      line-height: 1.6;
+    }
+    body.dark-mode .fashion-table td {
+      background-color: #333;
+      color: #f0f0f0;
+    }
+    .fashion-table td a {
+      color: #6a1b9a;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    body.dark-mode .fashion-table td a {
+      color: #ff69b4;
+    }
+    .fashion-table td a:hover {
+      color: #d81b60;
+      text-decoration: underline;
+    }
+    .fashion-table ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .fashion-table ul li {
+      margin: 8px 0;
+      position: relative;
+      padding-left: 20px;
+    }
+    .fashion-table ul li:before {
+      content: '✨';
+      position: absolute;
+      left: 0;
+      color: #e91e63;
+    }
+    body.dark-mode .fashion-table ul li:before {
+      color: #ff69b4;
+    }
+    .emoji {
+      font-size: 1.2em;
+      margin: 0 5px;
+    }
+    .brand-name {
+      font-size: 1.4em;
+      color: #6a1b9a;
+    }
+    body.dark-mode .brand-name {
+      color: #ff69b4;
+    }
+    .motto {
+      font-style: italic;
+      font-family: 'Playfair Display', serif;
+      color: #e91e63;
+      font-size: 1.1em;
+    }
+    body.dark-mode .motto {
+      color: #ff69b4;
+    }
+    @media (max-width: 600px) {
+      .fashion-table {
+        margin: 10px;
+      }
+      .fashion-table th, .fashion-table td {
+        padding: 10px;
+        font-size: 0.9em;
+      }
+      .fashion-table th {
+        font-size: 1em;
+      }
+      .brand-name {
+        font-size: 1.2em;
+      }
+    }
+    .upload-form {
+      padding: 15px;
+      overflow-x: auto;
+    }
+    .fashion-table {
+      width: 100%;
+      overflow-x: auto;
+      margin: 10px 0;
+    }
+    .fashion-table table {
+      min-width: 100%;
+      display: block;
+    }
+    @media (max-width: 600px) {
+      .upload-form {
+        padding: 10px;
+      }
+      .nasaka {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+      }
+      .fashion-table table {
+        display: flex;
+        flex-direction: column;
+      }
+      .fashion-table tr {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 15px;
+        border-bottom: 1px solid #ccc;
+      }
+      .fashion-table th,
+      .fashion-table td {
+        display: block;
+        width: 100%;
+        padding: 8px;
+        text-align: left;
+        font-size: 0.85em;
+      }
+      .fashion-table th {
+        background-color: #e91e63;
+        font-size: 0.9em;
+        padding: 10px 8px;
+      }
+      .fashion-table td {
+        background-color: #ffe6f0;
+        padding: 8px;
+      }
+      body.dark-mode .fashion-table th {
+        background-color: #d81b60;
+      }
+      body.dark-mode .fashion-table td {
+        background-color: #333;
+      }
+      .brand-name {
+        font-size: 1.1em;
+      }
+      .motto {
+        font-size: 1em;
+      }
+      .fashion-table ul li {
+        font-size: 0.85em;
+        padding-left: 15px;
+      }
+    }
+    @media (max-width: 480px) {
+      .upload-form {
+        padding: 8px;
+      }
+      .nasaka {
+        font-size: 1.5rem;
+      }
+      .fashion-table th,
+      .fashion-table td {
+        font-size: 0.8em;
+        padding: 6px;
+      }
+      .fashion-table ul li {
+        font-size: 0.8em;
+        margin: 5px 0;
+      }
+      .fashion-table td a {
+        font-size: 0.8em;
+      }
+      .emoji {
+        font-size: 1em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img class="arise" src="ifylogo2.PNG" style="width:160px; height:160px;" alt="Eze Rita Ifeoma FashionSphere">
+    <h1><strong class="car1">Rita King</strong><strong class="car2"> Wealth Collections </strong><strong class="car3">FashionSphere</strong></h1>
+    <div class="car4">
+      <p>Your Daily Dose of Fashion Inspiration</p>
+    </div>
+    <button class="theme-toggle" aria-label="Toggle dark mode">
+      <i class="fas fa-sun"></i>
+    </button>
+  </header>
+  <nav>
+    <a href="#home"><i class="fa fa-home" style="color: black;"></i> Home</a>
+    <a href="#portfolio"><i class="fa fa-shopping-bag" style="color: #ffd700;"></i> Portfolio</a>
+    <a href="#styles-general"><i class="fa fa-tshirt" style="color: #00ff00;"></i> Fashion Styles</a>
+    <a href="#contact"><i class="fa fa-envelope" style="color: #ff69b4;"></i> Contact Info</a>
+    <a href="#contact-us"><i class="fa fa-heart" style="color: red;"></i> Contact Us</a>
+    <a href="https://www.facebook.com/profile.php?id=100053941051643&mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://twitter.com/Ezeifyeze2"><i class="fab fa-twitter"></i></a>
+    <a href="https://instagram.com/ritk_ing"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.youtube.com/@RitaKingFashionSphere"><i class="fab fa-youtube"></i></a>
+    <a href="https://wa.me/2349036925288"><i class="fab fa-whatsapp"></i></a>
+  </nav>
+  <div class="text-slider">
+    <div class="slide-track" id="slideTrack">
+      <span class="slide">Welcome to Rita King Wealth Collections FashionSphere.</span>
+      <span class="slide">Embrace African royalty with our vibrant Ankara gowns.</span>
+      <span class="slide">Dapper and sharp in our tailored foreign suits.</span>
+      <span class="slide">Bold patterns, bold you — slay in Ankara style!</span>
+      <span class="slide">Trendsetting style for the modern diva and gentleman.</span>
+    </div>
+  </div>
+  <div class="fade-slider">
+    <div class="fade-slide active"><img src="crown.jpg" alt="Ankara Style"></div>
+    <div class="fade-slide"><img src="shape.jpg" alt="Streetwear"></div>
+    <div class="fade-slide"><img src="beautytie.jpg" alt="Foreign Suit"></div>
+    <div class="fade-slide"><img src="folah.jpeg" alt="Ankara Senator Wear"></div>
+    <div class="fade-slide"><img src="rich.PNG" style="width:100%; height:100%;" alt="Buba styles"></div>
+    <div class="fade-slide"><img src="wall.PNG" style="width:100%; height:100%;" alt="Ankara Senator Wear"></div>
+    <div class="fade-slide"><img src="fully.PNG" style="width:100%; height:100%;" alt="Ankara Senator Wear"></div>
+    <div class="fade-slide"><img src="pinky.PNG" style="width:100%; height:100%;" alt="Ankara Senator Wear"></div>
+    <div class="fade-slide"><img src="far.PNG" style="width:100%; height:100%;" alt="Ankara Senator Wear"></div>
+    <div class="fade-slide"><img src="oke.PNG" style="width:100%; height:100%;" alt="Ankara Senator Wear"></div>
+    <div class="fade-slide"><img src="stle.PNG" style="width:100%; height:100%;" alt="Ankara Senator Wear"></div>
+    <div class="fade-slide"><img src="oha.PNG" style="width:100%; height:100%;" alt="Ankara Senator Wear"></div>
+    <div class="fade-slide"><img src="silky.PNG" style="width:100%; height:100%;" alt="Ankara Senator Wear"></div>
+    <div class="fade-slide"><img src="floor.PNG" style="width:100%; height:100%;" alt="Ankara Senator Wear"></div>
+    <div class="fade-slide"><img src="slimy.PNG" style="width:100%; height:100%;" alt="Ankara Senator Wear"></div>
+    <div class="fade-slide"><img src="simpy.PNG" style="width:100%; height:100%;" alt="Ankara Senator Wear"></div>
+    <div class="fade-slide"><img src="white.PNG" style="width:100%; height:100%;" alt="Ankara Style"></div>
+    <div class="fade-slide"><img src="simple.PNG" style="width:100%; height:100%;" alt="Normal wear"></div>
+    <div class="fade-slide"><img src="pawpaw.PNG" style="width:100%; height:100%;" alt="Streetwear"></div>
+    <div class="fade-slide"><img src="red.PNG" style="width:100%; height:100%;" alt="Foreign Suit"></div>
+    <div class="fade-slide"><img src="vibe.PNG" style="width:100%; height:100%;" alt="Ankara Senator Wear"></div>
+    <div class="fade-slide"><img src="geese.PNG" style="width:100%; height:100%;" alt="Streetwear"></div>
+    <div class="fade-slide"><img src="batch.PNG" style="width:100%; height:100%;" alt="Streetwear"></div>
+    <div class="fade-slide"><img src="good.PNG" style="width:100%; height:100%;" alt="Streetwear"></div>
+    <div class="fade-slide"><img src="black.PNG" style="width:100%; height:100%;" alt="Streetwear"></div>
+    <div class="fade-slide"><img src="hairstyle.PNG" style="width:100%; height:100%;" alt="Ankara Senator Wear"></div>
+    <div class="fade-slide"><img src="girly.PNG" style="width:100%; height:100%;" alt="Ankara Senator Wear"></div>
+    <div class="fade-slide"><img src="guywoman.PNG" style="width:100%; height:100%;" alt="Ankara Senator Wear"></div>
+    <div class="fade-slide"><img src="mama.PNG" style="width:100%; height:100%;" alt="Ankara Senator Wear"></div>
+    <div class="fade-slide"><img src="pochers.PNG" style="width:100%; height:100%;" alt="Ankara Senator Wear"></div>
+    <div class="fade-slide"><img src="okay.PNG" style="width:100%; height:100%;" alt="Ankara Senator Wear"></div>
+    <div class="fade-slide"><img src="siblins.PNG" style="width:100%; height:100%;" alt="Ankara Senator Wear"></div>
+    <div class="fade-slide"><img src="pose.PNG" style="width:100%; height:100%;" alt="Ankara Senator Wear"></div>
+    <div class="fade-slide"><img src="popy.PNG" style="width:100%; height:100%;" alt="Ankara Senator Wear"></div>
+    <div class="fade-slide"><img src="walking.PNG" style="width:100%; height:100%;" alt="Ankara Senator Wear"></div>
+    <div class="fade-slide"><img src="guys.PNG" style="width:100%; height:100%;" alt="Ankara Senator Wear"></div>
+    <div class="fade-slide"><img src="okoro.PNG" style="width:100%; height:100%;" alt="Ankara Senator Wear"></div>
+  </div>
+  <div class="slider-dots" id="dotsContainer"></div>
+  <section class="upload-form">
+    <h1 class="nasaka">About Rita King Wealth Collections FashionSphere</h1>
+    <hr>
+    <div class="fashion-table">
+      <table border="1" cellpadding="8" cellspacing="0">
+        <tr>
+          <th>👑 Brand Name</th>
+          <td><strong class="brand-name">Rita King Wealth Collections FashionSphere</strong></td>
+        </tr>
+        <tr>
+          <th>📍 Address</th>
+          <td>56 St Felix Avenue, Trans-Ekulu, Enugu, Nigeria</td>
+        </tr>
+        <tr>
+          <th>📞 Phone</th>
+          <td><a href="tel:+2348030493225">+234 803 049 3225</a></td>
+        </tr>
+        <tr>
+          <th>💬 WhatsApp</th>
+          <td><a href="https://wa.me/2349036925288">+234 903 692 5288</a></td>
+        </tr>
+        <tr>
+          <th>📸 Instagram</th>
+          <td><a href="https://instagram.com/ritk_ing">@ritk_ing</a></td>
+        </tr>
+        <tr>
+          <th>📧 Email</th>
+          <td><a href="mailto:ezerita@998@gmail.com">ezerita@998@gmail.com</a></td>
+        </tr>
+        <tr>
+          <th>🐦 Twitter</th>
+          <td><a href="https://twitter.com/Ezeifyeze2">@Ezeifyeze2</a></td>
+        </tr>
+        <tr>
+          <th>✨ About Us</th>
+          <td>
+            Welcome to <strong>Rita King Wealth Collections FashionSphere</strong> — where elegance meets culture and style <span class="emoji">👗👔✨</span>.
+            We create timeless fashion pieces for <strong>adult men & women</strong>, <strong>stylish kidswear</strong>, and
+            <strong>authentic traditional & corporate outfits</strong>. Every stitch speaks class, confidence, and creativity <span class="emoji">💎</span>.
+            From royal agbadas and sleek suits to chic gowns and trendy kids’ looks, we’ve got you covered in luxury and comfort.
+          </td>
+        </tr>
+        <tr>
+          <th>🛍 Services</th>
+          <td>
+            <ul>
+              <li>👗 Female Wears — Casual, Corporate & Glam</li>
+              <li>👔 Male Wears — Corporate, Casual & Traditional</li>
+              <li>🧒 Kids Wears — Girls & Boys</li>
+              <li>🪡 Custom-Made Traditional Attire</li>
+              <li>💼 Executive Office Outfits</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <th>🌟 Motto</th>
+          <td class="motto"><em>"Where Wealth Meets Wardrobe"</em> <span class="emoji">✨💃🕺</span></td>
+        </tr>
+      </table>
+    </div>
+  </section>
+  <section class="container featured-designs">
+    <h2 class="cook" style="color:darkred;">Our Female 2025 Featured Designs</h2>
+    <div class="styles-grid">
+      <div class="style-card">
+        <img src="crown.jpg" alt="Ankara Agbada">
+        <h3>👑 "Curves meet culture – the Ankara mermaid never fails to wow."</h3>
+        <p>Keep accessories minimal; the gown’s silhouette is the main statement.</p>
+      </div>
+      <div class="style-card">
+        <img src="shape.jpg" alt="Foreign Gown">
+        <h3>Chic Elegance</h3>
+        <p>Runway-ready looks for every occasion.</p>
+      </div>
+      <div class="style-card">
+        <img src="beautytie.jpg" alt="Foreign Suit">
+        <h3>✨ "Bare shoulders, bold confidence – Ankara never hides beauty."</h3>
+        <p>Pair with a choker or layered necklace to highlight your neckline.</p>
+      </div>
+      <div class="style-card">
+        <img src="yellow.jpg" alt="Ankara Gown">
+        <h3>💃 "Playful, stylish, unstoppable – short Ankara, big energy!"</h3>
+        <p>Rock with sneakers for casual vibes or heels for a chic upgrade.</p>
+      </div>
+      <div class="style-card">
+        <img src="formalwear.jpeg" alt="Ankara Gown">
+        <h3>🔥 "Wrap it tight, slay all night – Ankara that hugs right."</h3>
+        <p>Choose a V-neck wrap style to enhance curves and elegance.</p>
+      </div>
+      <div class="style-card">
+        <img src="folah.jpeg" alt="Ankara Gown">
+        <h3>💃 "Flare it, flaunt it – Ankara peplum never misses."</h3>
+        <p>Match with a plain pencil skirt to balance busy prints.</p>
+      </div>
+    </div>
+  </section>
+  <h2>Our Top Female Style Picks</h2>
+  <div class="slider-container">
+    <button class="slide-btn left" aria-label="Previous products">❮</button>
+    <div class="product-slider" id="productSlider1">
+      <div class="product-card"><img src="shape.jpg" alt="Pink Bridal Gown"><p>Pink Bridal Gown</p></div>
+      <div class="product-card"><img src="beautytie.jpg" alt="Foreign Suit"><p>Foreign Suit</p></div>
+      <div class="product-card"><img src="yellow.jpg" alt="Yellow Chic Dress"><p>Yellow Chic Dress</p></div>
+      <div class="product-card"><img src="crown.jpg" alt="Ankara Agbada"><p>Ankara Agbada</p></div>
+      <div class="product-card"><img src="rich.PNG" alt="Pink Bridal Gown"><p>Pink Bridal Gown</p></div>
+      <div class="product-card"><img src="wall.PNG" alt="Foreign Suit"><p>Foreign Suit</p></div>
+      <div class="product-card"><img src="pinky.PNG" alt="Yellow Chic Dress"><p>Yellow Chic Dress</p></div>
+      <div class="product-card"><img src="fully.PNG" alt="Ankara Agbada"><p>Ankara Agbada</p></div>
+      <div class="product-card"><img src="silky.PNG" alt="Pink Bridal Gown"><p>Pink Bridal Gown</p></div>
+      <div class="product-card"><img src="stle.PNG" alt="Foreign Suit"><p>Foreign Suit</p></div>
+      <div class="product-card"><img src="oha.PNG" alt="Yellow Chic Dress"><p>Yellow Chic Dress</p></div>
+      <div class="product-card"><img src="slimy.PNG" alt="Ankara Agbada"><p>Ankara Agbada</p></div>
+    </div>
+    <button class="slide-btn right" aria-label="Next products">❯</button>
+  </div>
+  <section class="container featured-designs">
+    <h2>Our Male 2025 Featured Designs</h2>
+    <div class="styles-grid">
+      <div class="style-card">
+        <img src="good.PNG" alt="Ankara Agbada">
+        <h3>👑 "Style meets comfort – kaftan built for ease and class."</h3>
+        <p>Neutral shoes (black/brown) balance out bold stripe patterns.</p>
+      </div>
+      <div class="style-card">
+        <img src="white2.PNG" alt="Foreign Gown">
+        <h3>🌟 "Royal stitches, regal presence – embroidery that tells a story."</h3>
+        <p>Keep inner wear (buba & sokoto) plain so the agbada design stands out.</p>
+      </div>
+      <div class="style-card">
+        <img src="black.PNG" alt="Foreign Suit">
+        <h3>🔥 "Tradition redefined – agbada tailored for today’s king."</h3>
+        <p>Stay sharp in our tailored foreign suits.</p>
+      </div>
+      <div class="style-card">
+        <img src="SIZED.PNG" alt="Ankara Gown">
+        <h3>💙✨ "Royal in blue, touched with gold – elegance stitched in tradition."</h3>
+        <p>Pair with gold-accented wristwatch or cufflinks to match the kaftan detail.</p>
+      </div>
+      <div class="style-card">
+        <img src="red2.PNG" alt="Ankara Gown">
+        <h3>☀️ "Cool, calm, collected – short-sleeve kaftan for easy vibes."</h3>
+        <p>Perfect with casual slip-on shoes or sneakers for a relaxed look.</p>
+      </div>
+      <div class="style-card">
+        <img src="pickle.PNG" alt="Ankara Gown">
+        <h3>"Lines of culture, lines of confidence."</h3>
+        <p>Neutral shoes (black/brown) balance out bold stripe patterns.</p>
+      </div>
+    </div>
+  </section>
+  <h2>Our Male Signature Designs</h2>
+  <div class="slider-container">
+    <button class="slide-btn left" aria-label="Previous products">❮</button>
+    <div class="product-slider" id="productSlider2">
+      <div class="product-card">
+        <img src="alike.PNG" alt="Pink Bridal Gown">
+        <p>Pink Bridal Gown</p>
+      </div>
+      <div class="product-card">
+        <img src="white.PNG" alt="Beauty Tie Ankara">
+        <p>Beauty Tie Ankara</p>
+      </div>
+      <div class="product-card">
+        <img src="red.PNG" alt="Yellow Chic Dress">
+        <p>Yellow Chic Dress</p>
+      </div>
+      <div class="product-card">
+        <img src="mendem.PNG" alt="Crown Royal Gown">
+        <p>Crown Royal Gown</p>
+      </div>
+      <div class="product-card">
+        <img src="pawpaw.PNG" alt="Pink Bridal Gown">
+        <p>Pink Bridal Gown</p>
+      </div>
+      <div class="product-card">
+        <img src="brown.PNG" alt="Beauty Tie Ankara">
+        <p>Beauty Tie Ankara</p>
+      </div>
+      <div class="product-card">
+        <img src="agba2.PNG" alt="Yellow Chic Dress">
+        <p>Yellow Chic Dress</p>
+      </div>
+      <div class="product-card">
+        <img src="alhaji.PNG" alt="Crown Royal Gown">
+        <p>Crown Royal Gown</p>
+      </div>
+    </div>
+    <button class="slide-btn right" aria-label="Next products">❯</button>
+  </div>
+  <div class="container" id="home">
+    <section id="styles" class="styles-section">
+      <h2><em class="florishblue">Rita Princess</em> <em class="florishsky">Style Collections</em></h2>
+      <div class="styles-grid">
+        <div class="style-card">
+          <img src="hairstyle.PNG" alt="Ankara Senator Wear">
+          <h3>👑 "Sleeveless cuteness wrapped in culture."</h3>
+          <p>Pair with white sneakers for a trendy, casual vibe.</p>
+        </div>
+        <div class="style-card">
+          <img src="girly.PNG" alt="Streetwear">
+          <h3>🌸 "Little princess, big Ankara vibes."</h3>
+          <p>Pair with cute ballerina flats or sandals for comfort and style.</p>
+        </div>
+        <div class="style-card">
+          <img src="mama.PNG" alt="Foreign Suit">
+          <h3>💃 "Tiny steps, timeless prints – fashion starts early."</h3>
+          <p>Keep accessories light (small black handbag) so she stays comfy.</p>
+        </div>
+        <div class="style-card">
+          <img src="peagent.PNG" alt="Foreign Suit">
+          <h3>🌹 "Grace in every step, Ankara elegance in full length."</h3>
+          <p>Style with simple heels and a small clutch/purse for occasions like birthdays or weddings.</p>
+        </div>
+        <div class="style-card">
+          <img src="kink.PNG" alt="Foreign Suit">
+          <h3>🌈 "Colors that sparkle, style that shines – little Ankara queen."</h3>
+          <p>A denim jacket can be layered for a playful mix of modern and traditional.</p>
+        </div>
+        <div class="style-card">
+          <img src="komchi.PNG" alt="Foreign Suit">
+          <h3>🌼 "Her smile + Ankara = pure sunshine."</h3>
+          <p>Opt for her short gowns for easy movement and extra cuteness.</p>
+        </div>
+      </div>
+      <h2>Our Female Kids Signature Designs</h2>
+      <div class="slider-container">
+        <button class="slide-btn left" aria-label="Previous products">❮</button>
+        <div class="product-slider" id="productSlider3">
+          <div class="product-card">
+            <img src="blon.PNG" alt="Pink Bridal Gown">
+            <p>Pink Bridal Gown</p>
+          </div>
+          <div class="product-card">
+            <img src="help.PNG" alt="Pink Bridal Gown">
+            <p>Pink Bridal Gown</p>
+          </div>
+          <div class="product-card">
+            <img src="hairstyle.PNG" alt="Beauty Tie Ankara">
+            <p>Beauty Tie Ankara</p>
+          </div>
+          <div class="product-card">
+            <img src="girly.PNG" alt="Yellow Chic Dress">
+            <p>Yellow Chic Dress</p>
+          </div>
+          <div class="product-card">
+            <img src="mama.PNG" alt="Crown Royal Gown">
+            <p>Crown Royal Gown</p>
+          </div>
+          <div class="product-card">
+            <img src="bale.PNG" alt="Pink Bridal Gown">
+            <p>Pink Bridal Gown</p>
+          </div>
+          <div class="product-card">
+            <img src="guywoman.PNG" alt="Beauty Tie Ankara">
+            <p>Beauty Tie Ankara</p>
+          </div>
+          <div class="product-card">
+            <img src="kink.PNG" alt="Beauty Tie Ankara">
+            <p>Beauty Tie Ankara</p>
+          </div>
+          <div class="product-card">
+            <img src="komchi.PNG" alt="Beauty Tie Ankara">
+            <p>Beauty Tie Ankara</p>
+          </div>
+          <div class="product-card">
+            <img src="peagent.PNG" alt="Beauty Tie Ankara">
+            <p><i class="fas fa-star" style="color: #ffd700;"></i>Beauty Tie Ankara</p>
+          </div>
+        </div>
+        <button class="slide-btn right" aria-label="Next products">❯</button>
+      </div>
+    </section>
+    <section id="styles-prince" class="styles-section">
+      <h2><em class="florishblue">Rita Prince</em> <em class="florishsky">Style Collections</em></h2>
+      <div class="styles-grid">
+        <div class="style-card">
+          <img src="pose.PNG" alt="Ankara Senator Wear">
+          <h3>👑 "Little prince in agbada – tradition wrapped in cuteness."</h3>
+          <p>Agbada swag, future ready ✨.</p>
+        </div>
+        <div class="style-card">
+          <img src="popy.PNG" alt="Streetwear">
+          <h3>"Easy fit, sharp style – tradition made playful."</h3>
+          <p>Born to slay in tradition.</p>
+        </div>
+        <div class="style-card">
+          <img src="guyman.PNG" alt="Foreign Suit">
+          <h3>💎 "Double shades, double charm – he rocks it like a star."</h3>
+          <p>Match one of the tones with his cap (fila) for a coordinated look.</p>
+        </div>
+        <div class="style-card">
+          <img src="gentman.PNG" alt="Foreign Suit">
+          <h3>👔 "Sharp, simple, stylish – senator vibes for the little king."</h3>
+          <p>Little King, Big Style 👑.</p>
+        </div>
+        <div class="style-card">
+          <img src="bricks.PNG" alt="Foreign Suit">
+          <h3>🔥 "Lines of culture, steps of confidence."</h3>
+          <p>Small size, huge drip.</p>
+        </div>
+        <div class="style-card">
+          <img src="knick.PNG" alt="Foreign Suit">
+          <h3>🌟 "Small but classy – little man, big fashion energy."</h3>
+          <p>Knicker fit, playful spirit 🐾.</p>
+        </div>
+      </div>
+      <h2>Our Male Kids Signature Designs</h2>
+      <div class="slider-container">
+        <button class="slide-btn left" aria-label="Previous products">❮</button>
+        <div class="product-slider" id="productSlider4">
+          <div class="product-card">
+            <img src="popy.PNG" alt="Pink Bridal Gown">
+            <p>Pink Bridal Gown</p>
+          </div>
+          <div class="product-card">
+            <img src="pose.PNG" alt="Beauty Tie Ankara">
+            <p>Beauty Tie Ankara</p>
+          </div>
+          <div class="product-card">
+            <img src="walking.PNG" alt="Yellow Chic Dress">
+            <p>Yellow Chic Dress</p>
+          </div>
+          <div class="product-card">
+            <img src="gentman.PNG" alt="Crown Royal Gown">
+            <p>Royal Crown Agbada</p>
+          </div>
+          <div class="product-card">
+            <img src="bricks.PNG" alt="Pink Bridal Gown">
+            <p>Pink Bridal Gown</p>
+          </div>
+          <div class="product-card">
+            <img src="guyman.PNG" alt="Beauty Tie Ankara">
+            <p>Native Prince Couture</p>
+          </div>
+        </div>
+        <button class="slide-btn right" aria-label="Next products">❯</button>
+      </div>
+    </section>
+    <div class="post">
+      <h3>Spring Street Style 2025</h3>
+      <p>Fresh, vibrant looks are taking over the streets this season...</p>
+      <img src="formalwear.jpeg" alt="Spring Look">
+    </div>
+    <div class="post">
+      <h3>Spring 2025 Street Couture</h3>
+      <p>Exclusive glimpses of backstage magic and runway-ready elegance.</p>
+      <video width="100%" height="50%" controls>
+        <source src="ifeomavideo.mp4" type="video/mp4"/>
+        Your browser does not support HTML video.
+      </video>
+    </div>
+  </div>
+  <section id="portfolio" class="container portfolio-section">
+    <h2>Our Fashion Portfolio</h2>
+    <div class="post">
+      <h3>Spring Lookbook</h3>
+      <p>Discover vibrant, trendsetting looks dominating the urban fashion scene.</p>
+      <img src="streetwear.jpeg" alt="Spring Fashion">
+    </div>
+    <div class="post">
+      <h3>Runway Highlights</h3>
+      <p>Captivating moments from the global runway stage.</p>
+      <video autoplay muted loop>
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4"/>
+        Your browser does not support HTML video.
+      </video>
+    </div>
+  </section>
+  <section id="styles-general" class="container styles-section">
+    <h2><em class="florish3">Rita King Wealth Collections FashionSphere</em> <em class="florish4">Fashion</em> <em class="florish5">Styles</em></h2>
+    <div class="styles-grid">
+      <div class="style-card">
+        <img src="shape.jpg" alt="Ankara Senator Wear">
+        <h3>Ankara Artistry</h3>
+        <p>Vibrant, culturally rich designs with Nigerian elegance.</p>
+      </div>
+      <div class="style-card">
+        <img src="portfolio.jpeg" alt="Streetwear">
+        <h3>Urban Vogue</h3>
+        <p>Trendsetting looks for the bold and stylish youth.</p>
+      </div>
+      <div class="style-card">
+        <img src="florish.jpeg" alt="Foreign Suit">
+        <h3>Sophisticated Splendor</h3>
+        <p>Elegant ensembles for unforgettable moments.</p>
+      </div>
+    </div>
+  </section>
+  <section id="contact" class="container contact-info">
+    <h2>Contact Information</h2>
+    <div class="contact-details">
+      <p><i class="fa fa-envelope"></i> Email: <a href="mailto:ezerita@998@gmail.com">ezerita@998@gmail.com</a></p>
+      <p><i class="fa fa-phone"></i> Phone: <a href="tel:+2348030493225">+234 803 049 3225</a></p>
+      <p><i class="fab fa-whatsapp"></i> WhatsApp: <a href="https://wa.me/2349036925288">+234 903 692 5288</a></p>
+      <p><i class="fa fa-instagram"></i> Instagram: <a href="https://instagram.com/ritk_ing">@ritk_ing</a></p>
+    </div>
+  </section>
+  <section id="contact-us" class="container contact-us">
+    <h2>Contact Us</h2>
+    <form id="contactForm" action="https://formspree.io/f/movlokjd" method="post" class="contact-form">
+      <div class="input-group">
+        <label for="name"><i class="fa fa-user"></i> Name</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+      </div>
+      <div class="input-group">
+        <label for="phone"><i class="fa fa-phone"></i> Phone</label>
+        <input type="tel" id="phone" name="phone" pattern="[0-9]{10,15}" placeholder="Enter phone number" required>
+      </div>
+      <div class="input-group">
+        <label for="email"><i class="fa fa-envelope"></i> Email</label>
+        <input type="email" id="email" name="_replyto" placeholder="Your Email" required>
+      </div>
+      <div class="input-group">
+        <label for="message"><i class="fa fa-comment"></i> Message</label>
+        <textarea id="message" name="message" rows="4" placeholder="Your message..." required></textarea>
+      </div>
+      <input type="text" name="_gotcha" style="display:none">
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+  <footer>
+    <h3>Follow Rita King Wealth Collections FashionSphere</h3>
+    <div class="social-icons">
+      <a href="https://www.facebook.com/profile.php?id=100053941051643&mibextid=ZbWKwL"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://twitter.com/Ezeifyeze2"><i class="fab fa-twitter"></i></a>
+      <a href="https://instagram.com/ritk_ing"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/2349036925288"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://www.youtube.com/@RitaKingFashionSphere"><i class="fab fa-youtube"></i></a>
+    </div>
+    <p>© 2025 Rita King Wealth Collections FashionSphere. All rights reserved.</p>
+  </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Theme Toggle
+      const themeToggle = document.querySelector('.theme-toggle');
+      const themeIcon = themeToggle.querySelector('i');
+      themeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        if (document.body.classList.contains('dark-mode')) {
+          themeIcon.classList.remove('fa-sun');
+          themeIcon.classList.add('fa-moon');
+        } else {
+          themeIcon.classList.remove('fa-moon');
+          themeIcon.classList.add('fa-sun');
+        }
+      });
+
+      // Fade Slider
+      const slides = document.querySelectorAll('.fade-slide');
+      const dotsContainer = document.getElementById('dotsContainer');
+      let currentIndex = 0;
+
+      if (slides.length === 0) {
+        console.error('No slides found with class .fade-slide');
+        return;
+      }
+
+      slides.forEach((_, i) => {
+        const dot = document.createElement('span');
+        dot.classList.add('slider-dot');
+        dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
+        if (i === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => showSlide(i));
+        dotsContainer.appendChild(dot);
+      });
+
+      const dots = document.querySelectorAll('.slider-dot');
+
+      function showSlide(index) {
+        slides.forEach((slide, i) => {
+          slide.classList.toggle('active', i === index);
+          dots[i].classList.toggle('active', i === index);
+        });
+        currentIndex = index;
+      }
+
+      function nextSlide() {
+        const next = (currentIndex + 1) % slides.length;
+        showSlide(next);
+      }
+
+      setInterval(nextSlide, 4000);
+
+      // Product Sliders
+      document.querySelectorAll('.slider-container').forEach(container => {
+        const slider = container.querySelector('.product-slider');
+        const leftBtn = container.querySelector('.slide-btn.left');
+        const rightBtn = container.querySelector('.slide-btn.right');
+
+        leftBtn.addEventListener('click', () => {
+          slider.scrollLeft -= 220;
+        });
+
+        rightBtn.addEventListener('click', () => {
+          slider.scrollLeft += 220;
+        });
+      });
+
+      // Text Slider Pause on Hover
+      const textSlider = document.getElementById('slideTrack');
+      textSlider.parentElement.addEventListener('mouseenter', () => {
+        textSlider.style.animationPlayState = 'paused';
+      });
+      textSlider.parentElement.addEventListener('mouseleave', () => {
+        textSlider.style.animationPlayState = 'running';
+      });
+
+      // Form Submission
+      document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const name = document.getElementById('name').value;
+        const form = this;
+        fetch(form.action, {
+          method: form.method,
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        }).then(response => {
+          if (response.ok) {
+            window.location.href = `thankyou.html?name=${encodeURIComponent(name)}&action=submitting`;
+          } else {
+            alert('Form submission failed. Please try again.');
+          }
+        }).catch(error => {
+          console.error('Error:', error);
+          alert('An error occurred. Please try again.');
+        });
+      });
+    });
+  </script>
+</body>
+</html>
