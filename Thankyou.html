@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Rita King Wealth Collections FashionSphere - Thank you for your submission.">
+  <meta name="keywords" content="Ankara fashion, Nigerian clothing, Rita King FashionSphere">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <title>Thank You - Rita King Wealth Collections FashionSphere</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: purple;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      transition: background-color 0.3s, color 0.3s;
+    }
+    body.dark-mode {
+      background-color: #1a1a1a;
+      color: #f0f0f0;
+    }
+    header {
+      background-color: green;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: background-color 0.3s;
+    }
+    body.dark-mode header {
+      background-color: #004d00;
+    }
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+      text-align: center;
+    }
+    .thank-you {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      transition: background-color 0.3s, color 0.3s;
+    }
+    body.dark-mode .thank-you {
+      background: #2a2a2a;
+      color: #f0f0f0;
+    }
+    .thank-you h2 {
+      color: #2e7d32;
+    }
+    body.dark-mode .thank-you h2 {
+      color: #81c784;
+    }
+    .thank-you p {
+      font-size: 1.1rem;
+      color: #444;
+    }
+    body.dark-mode .thank-you p {
+      color: #f0f0f0;
+    }
+    a {
+      color: #e91e63;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    body.dark-mode a {
+      color: #ff69b4;
+    }
+    .theme-toggle {
+      background-color: #e91e63;
+      color: white;
+      border: none;
+      font-size: 1.5rem;
+      padding: 8px;
+      border-radius: 50%;
+      cursor: pointer;
+      opacity: 0.7;
+      transition: opacity 0.3s, background-color 0.3s;
+      margin: 10px;
+    }
+    .theme-toggle:hover {
+      opacity: 1;
+      background-color: #d81b60;
+    }
+    .emoji {
+      font-size: 1.2rem;
+      margin: 0 5px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Rita King Wealth Collections FashionSphere</h1>
+    <button class="theme-toggle" aria-label="Toggle dark mode">
+      <i class="fas fa-sun"></i>
+    </button>
+  </header>
+  <div class="container">
+    <div class="thank-you">
+      <h2 id="greeting">Thank You for visiting Rita King Wealth collections! <span class="emoji">👑✨</span></h2>
+      <p id="message">Your submission has been received. We'll get back to you soon! <span class="emoji">👗💃</span></p>
+      <p><a href="index.html">Return to Home <span class="emoji">🕺</span></a></p>
+    </div>
+  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Theme Toggle
+      const themeToggle = document.querySelector('.theme-toggle');
+      const themeIcon = themeToggle.querySelector('i');
+      themeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark-mode');
+        if (document.body.classList.contains('dark-mode')) {
+          themeIcon.classList.remove('fa-sun');
+          themeIcon.classList.add('fa-moon');
+        } else {
+          themeIcon.classList.remove('fa-moon');
+          themeIcon.classList.add('fa-sun');
+        }
+      });
+
+      // Parse URL parameters
+      const params = new URLSearchParams(window.location.search);
+      const name = params.get('name');
+      const action = params.get('action');
+
+      // Update greeting and message
+      if (name && action === 'submitting') {
+        document.getElementById('greeting').innerHTML = `Welcome to Rita King Wealth Collections FashionSphere, ${decodeURIComponent(name)}! <span class="emoji">👑✨</span>`;
+        document.getElementById('message').innerHTML = `Thank you for ${action} your message. We'll get back to you soon! <span class="emoji">👗💃</span>`;
+      }
+    });
+  </script>
+</body>
+</html>
